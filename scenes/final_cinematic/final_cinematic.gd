@@ -63,8 +63,7 @@ func _input(event):
 			laugh()
 			$RatText.text = "[b]FIN[/b]\nPulsa para volver a jugar."
 		else:
-			get_tree().change_scene_to_file("res://scenes/gameplay/gameplay.tscn")
-			queue_free()
+			SceneLoader.create_scene_loader($"..", "res://scenes/gameplay/gameplay.tscn")
 
 func laugh():
 	$"../Sprites/Sprite2D2/AnimationPlayer".play("laugh")

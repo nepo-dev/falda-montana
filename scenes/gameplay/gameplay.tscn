@@ -84,22 +84,11 @@ script = ExtResource("3_ljvf3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerCharacter"]
 
 [node name="GameFinish" type="Node2D" parent="."]
-position = Vector2(0, -5662)
+position = Vector2(0, -5670)
 script = ExtResource("12_wvmty")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GameFinish"]
 stream = ExtResource("13_dlsl4")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="GameFinish"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="GameFinish/CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
 
 [node name="DetectPlayer" parent="." instance=ExtResource("14_shnt8")]
 position = Vector2(311, -705)
