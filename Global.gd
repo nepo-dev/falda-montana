@@ -1,6 +1,8 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal player_bounced_on_trampoline
+@warning_ignore("unused_signal")
 signal a_rock_was_destroyed
 
 var rock_manager: Node

@@ -195,8 +195,6 @@ scale = Vector2(-1.03301, 0.256824)
 [node name="DrawLineGraphic" parent="Tutorial/Roca" instance=ExtResource("19_brn3d")]
 position = Vector2(-471, -7)
 
-[node name="Node2D" type="Node2D" parent="Tutorial/Roca"]
-
 [node name="RockDestroyedSounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_tn47s")
 script = ExtResource("23_bygat")
