@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://brnqolrps5hqs" path="res://assets/final_cinematic/montana_final.png" id="2_ixcqw"]
 [ext_resource type="Texture2D" uid="uid://ctlwiy2ggbun7" path="res://assets/final_cinematic/rata_final.png" id="3_ks4p6"]
 [ext_resource type="Texture2D" uid="uid://b8w61fd41sbfe" path="res://assets/final_cinematic/llorar_montana_final_1.png" id="3_ofjhy"]
-[ext_resource type="Script" path="res://scenes/finial_cinematic/final_cinematic.gd" id="4_hhglg"]
+[ext_resource type="Script" uid="uid://cb5v8xc6dsoaf" path="res://scenes/finial_cinematic/final_cinematic.gd" id="4_hhglg"]
 [ext_resource type="Texture2D" uid="uid://d3wm2ydmoqkky" path="res://assets/final_cinematic/llorar_montana_final_2.png" id="4_sl3em"]
 [ext_resource type="Texture2D" uid="uid://bveq7w6bpd8l6" path="res://assets/square.svg" id="5_n8pgo"]
 [ext_resource type="Texture2D" uid="uid://eg7q4rshsjts" path="res://assets/final_cinematic/risa_montana_final_1.png" id="5_na281"]
@@ -78,10 +78,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a28bn"]
 _data = {
-"RESET": SubResource("Animation_mp60b"),
-"cry": SubResource("Animation_ah1t0"),
-"idle": SubResource("Animation_kyyk0"),
-"laugh": SubResource("Animation_36b3k")
+&"RESET": SubResource("Animation_mp60b"),
+&"cry": SubResource("Animation_ah1t0"),
+&"idle": SubResource("Animation_kyyk0"),
+&"laugh": SubResource("Animation_36b3k")
 }
 
 [sub_resource type="Animation" id="Animation_1hq7y"]
@@ -141,8 +141,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8v30k"]
 _data = {
-"RESET": SubResource("Animation_1hq7y"),
-"start": SubResource("Animation_pty7g")
+&"RESET": SubResource("Animation_1hq7y"),
+&"start": SubResource("Animation_pty7g")
 }
 
 [sub_resource type="Animation" id="Animation_2k7xu"]
@@ -178,8 +178,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bs2r1"]
 _data = {
-"RESET": SubResource("Animation_2k7xu"),
-"new_animation": SubResource("Animation_44s8t")
+&"RESET": SubResource("Animation_2k7xu"),
+&"new_animation": SubResource("Animation_44s8t")
 }
 
 [sub_resource type="Animation" id="Animation_r4fka"]
@@ -188,7 +188,7 @@ length = 0.5
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1id2"]
 _data = {
-"transition": SubResource("Animation_r4fka")
+&"transition": SubResource("Animation_r4fka")
 }
 
 [node name="FinalCinematic" type="Node2D"]
@@ -207,7 +207,7 @@ texture = ExtResource("2_ixcqw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites/Sprite2D2"]
 libraries = {
-"": SubResource("AnimationLibrary_a28bn")
+&"": SubResource("AnimationLibrary_a28bn")
 }
 autoplay = "cry"
 
@@ -218,7 +218,7 @@ texture = ExtResource("3_ks4p6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites"]
 libraries = {
-"": SubResource("AnimationLibrary_8v30k")
+&"": SubResource("AnimationLibrary_8v30k")
 }
 autoplay = "start"
 
@@ -243,7 +243,7 @@ texture = ExtResource("6_m4y2h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/TextureRect"]
 libraries = {
-"": SubResource("AnimationLibrary_bs2r1")
+&"": SubResource("AnimationLibrary_bs2r1")
 }
 autoplay = "new_animation"
 
@@ -254,11 +254,11 @@ offset_top = 47.0
 offset_right = 511.0
 offset_bottom = 255.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
 theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 26
-theme_override_font_sizes/italics_font_size = 28
-theme_override_font_sizes/bold_italics_font_size = 28
-theme_override_font_sizes/mono_font_size = 28
 bbcode_enabled = true
 text = "Hola k tal bbsita?"
 
@@ -270,7 +270,7 @@ texture = ExtResource("5_n8pgo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
 libraries = {
-"": SubResource("AnimationLibrary_r1id2")
+&"": SubResource("AnimationLibrary_r1id2")
 }
 autoplay = "transition"
 

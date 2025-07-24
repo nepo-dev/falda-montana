@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://g6i6xqvaxk81"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/rock/rock_controller.gd" id="1_js7mc"]
-[ext_resource type="Script" path="res://scenes/gameplay/rock/rock_hit.gd" id="2_f6cby"]
+[ext_resource type="Script" uid="uid://dlguobi87hnbj" path="res://scenes/gameplay/rock/rock_controller.gd" id="1_js7mc"]
+[ext_resource type="Script" uid="uid://b4ld587tru785" path="res://scenes/gameplay/rock/rock_hit.gd" id="2_f6cby"]
 [ext_resource type="Texture2D" uid="uid://cl1k8wo3iwh5u" path="res://assets/roca/piedra.png" id="2_fbtd6"]
 [ext_resource type="Texture2D" uid="uid://d2yc6fv4bx7cm" path="res://assets/roca/particula_piedra.png" id="5_j36w2"]
 

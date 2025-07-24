@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dpucibn4og47f"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/joke.gd" id="1_qfnt6"]
+[ext_resource type="Script" uid="uid://drfcxdr4ijesd" path="res://scenes/gameplay/joke.gd" id="1_qfnt6"]
 [ext_resource type="Texture2D" uid="uid://2xkvh2k2g4cy" path="res://assets/chiste.png" id="2_3a6dt"]
 [ext_resource type="AudioStream" uid="uid://b657kow7oflyd" path="res://assets/audio/chistecito.ogg" id="3_ajwja"]
 [ext_resource type="AudioStream" uid="uid://sm7j1y4u6xc4" path="res://assets/audio/music.ogg" id="4_p8n8o"]
@@ -93,9 +93,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kf0qm"]
 _data = {
-"RESET": SubResource("Animation_p55sw"),
-"idle": SubResource("Animation_aok58"),
-"pickup": SubResource("Animation_e5mx0")
+&"RESET": SubResource("Animation_p55sw"),
+&"idle": SubResource("Animation_aok58"),
+&"pickup": SubResource("Animation_e5mx0")
 }
 
 [node name="Joke" type="Node2D"]

@@ -1,16 +1,15 @@
 [gd_scene load_steps=17 format=3 uid="uid://b5epkswg1kh0q"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/bottom_floor.gd" id="1_2i74j"]
+[ext_resource type="Script" uid="uid://cc3x37fyffm20" path="res://scenes/gameplay/bottom_floor.gd" id="1_2i74j"]
 [ext_resource type="Texture2D" uid="uid://dtt0hpq8wd37p" path="res://assets/cuerda/medio_cuerda.png" id="2_wy0tn"]
-[ext_resource type="Script" path="res://scenes/gameplay/rope_bounce_animation.gd" id="3_158j0"]
+[ext_resource type="Script" uid="uid://xvpvfiilgjqn" path="res://scenes/gameplay/rope_bounce_animation.gd" id="3_158j0"]
 [ext_resource type="Texture2D" uid="uid://bw22b8kywtlrv" path="res://assets/rat-tilemap.svg" id="4_dexbm"]
-[ext_resource type="Script" path="res://scenes/gameplay/player-character.gd" id="5_m6fej"]
+[ext_resource type="Script" uid="uid://byvoakotdfen" path="res://scenes/gameplay/player-character.gd" id="5_m6fej"]
 [ext_resource type="Texture2D" uid="uid://bakad7fcpo673" path="res://assets/zarigueya/main_salto.png" id="6_g02qx"]
-[ext_resource type="Script" path="res://scenes/gameplay/player-character-sprite.gd" id="7_io2i6"]
-[ext_resource type="Script" path="res://scenes/gameplay/trampoline/trampoline-manager.gd" id="8_qdp3a"]
-[ext_resource type="Script" path="res://scenes/gameplay/camera.gd" id="9_yii1t"]
+[ext_resource type="Script" uid="uid://df26nld7rvgwp" path="res://scenes/gameplay/player-character-sprite.gd" id="7_io2i6"]
+[ext_resource type="Script" uid="uid://bhgltbkbtenuj" path="res://scenes/gameplay/trampoline/trampoline-manager.gd" id="8_qdp3a"]
+[ext_resource type="Script" uid="uid://blm6eqj5hg4h0" path="res://scenes/gameplay/camera.gd" id="9_yii1t"]
 [ext_resource type="Texture2D" uid="uid://bveq7w6bpd8l6" path="res://assets/square.svg" id="10_fa4ox"]
-[ext_resource type="Texture2D" uid="uid://4t2xpu4lowg7" path="res://assets/montana_copia.png" id="11_galr3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_j5mx2"]
 b = Vector2(600, 0)
@@ -19,98 +18,44 @@ b = Vector2(600, 0)
 texture = ExtResource("4_dexbm")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 0:2/0 = 0
-0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:2/0/physics_layer_0/angular_velocity = 0.0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 4:4/0 = 0
-4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:4/0/physics_layer_0/angular_velocity = 0.0
 3:3/0 = 0
-3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:3/0/physics_layer_0/angular_velocity = 0.0
 3:2/0 = 0
-3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:2/0/physics_layer_0/angular_velocity = 0.0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32)
 1:3/0 = 0
-1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:3/0/physics_layer_0/angular_velocity = 0.0
 2:3/0 = 0
-2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:3/0/physics_layer_0/angular_velocity = 0.0
 2:4/0 = 0
-2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:4/0/physics_layer_0/angular_velocity = 0.0
 2:5/0 = 0
-2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:5/0/physics_layer_0/angular_velocity = 0.0
 1:4/0 = 0
-1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:4/0/physics_layer_0/angular_velocity = 0.0
 0:3/0 = 0
-0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:3/0/physics_layer_0/angular_velocity = 0.0
 0:4/0 = 0
-0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:4/0/physics_layer_0/angular_velocity = 0.0
 0:5/0 = 0
-0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:5/0/physics_layer_0/angular_velocity = 0.0
 1:5/0 = 0
-1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:5/0/physics_layer_0/angular_velocity = 0.0
 3:4/0 = 0
-3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:4/0/physics_layer_0/angular_velocity = 0.0
 3:0/0 = 0
-3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 4:3/0 = 0
-4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:3/0/physics_layer_0/angular_velocity = 0.0
 3:1/0 = 0
-3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, -32)
 4:1/0 = 0
-4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:1/0/physics_layer_0/angular_velocity = 0.0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, 32, 32, -32)
 4:2/0 = 0
-4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 32, 32, 32, -32)
 
 [sub_resource type="TileSet" id="TileSet_p275w"]
@@ -123,6 +68,9 @@ radius = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jgpq"]
 size = Vector2(64, 64)
+
+[sub_resource type="Resource" id="Resource_2sg8s"]
+metadata/__load_path__ = "res://assets/montana_copia.png"
 
 [node name="Main" type="Node2D"]
 
@@ -205,4 +153,4 @@ motion_scale = Vector2(0.165, 0.165)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.0627451, 0.0627451, 0.0627451, 1)
 position = Vector2(-416, 543)
-texture = ExtResource("11_galr3")
+texture = SubResource("Resource_2sg8s")

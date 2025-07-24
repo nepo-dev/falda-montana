@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://uijxw3520kld"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/bushes/bush_manager.gd" id="1_ijynx"]
+[ext_resource type="Script" uid="uid://c1hc0udfb1pie" path="res://scenes/gameplay/bushes/bush_manager.gd" id="1_ijynx"]
 
 [sub_resource type="Animation" id="Animation_kt5l1"]
 length = 0.001
@@ -59,8 +59,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1fyby"]
 _data = {
-"RESET": SubResource("Animation_kt5l1"),
-"hit": SubResource("Animation_l5e38")
+&"RESET": SubResource("Animation_kt5l1"),
+&"hit": SubResource("Animation_l5e38")
 }
 
 [node name="BushManager" type="Node2D"]

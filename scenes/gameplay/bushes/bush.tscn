@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dkng6ffmfdfvj"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/bushes/bush_controller.gd" id="1_tttle"]
+[ext_resource type="Script" uid="uid://b8vq4ly5u2toj" path="res://scenes/gameplay/bushes/bush_controller.gd" id="1_tttle"]
 [ext_resource type="Texture2D" uid="uid://whijp5dsxxa2" path="res://assets/arbusto/01_arbusto.png" id="2_nbxbh"]
 [ext_resource type="AudioStream" uid="uid://d4nuya6rdgtet" path="res://assets/audio/bush.ogg" id="3_7incl"]
 
@@ -108,10 +108,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_baj5c"]
 _data = {
-"RESET": SubResource("Animation_kt5l1"),
-"hit": SubResource("Animation_l5e38"),
-"hit_indirect": SubResource("Animation_ud736"),
-"idle": SubResource("Animation_1olms")
+&"RESET": SubResource("Animation_kt5l1"),
+&"hit": SubResource("Animation_l5e38"),
+&"hit_indirect": SubResource("Animation_ud736"),
+&"idle": SubResource("Animation_1olms")
 }
 
 [node name="Bush" type="StaticBody2D" groups=["walls"]]

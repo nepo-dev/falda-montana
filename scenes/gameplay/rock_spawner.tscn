@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcgm675xw4oul"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/rock/rock_spawner.gd" id="1_cglio"]
+[ext_resource type="Script" uid="uid://d0l26e8qjlift" path="res://scenes/gameplay/rock/rock_spawner.gd" id="1_cglio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ch2b"]
 size = Vector2(500, 20)

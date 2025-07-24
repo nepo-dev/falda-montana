@@ -1,16 +1,18 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkmgsdb0fcp0i"]
 
-[ext_resource type="Script" path="res://scenes/gameplay/player-character.gd" id="1_8r7pl"]
+[ext_resource type="Script" uid="uid://byvoakotdfen" path="res://scenes/gameplay/player-character.gd" id="1_8r7pl"]
 [ext_resource type="Texture2D" uid="uid://bakad7fcpo673" path="res://assets/zarigueya/main_salto.png" id="2_hoqdi"]
-[ext_resource type="Script" path="res://scenes/gameplay/player-character-sprite.gd" id="3_6262p"]
-[ext_resource type="Script" path="res://scenes/gameplay/trampoline/trampoline-manager.gd" id="4_qj3tu"]
-[ext_resource type="Script" path="res://scenes/gameplay/camera.gd" id="5_x402s"]
+[ext_resource type="Script" uid="uid://df26nld7rvgwp" path="res://scenes/gameplay/player-character-sprite.gd" id="3_6262p"]
+[ext_resource type="Script" uid="uid://bhgltbkbtenuj" path="res://scenes/gameplay/trampoline/trampoline-manager.gd" id="4_qj3tu"]
+[ext_resource type="Script" uid="uid://blm6eqj5hg4h0" path="res://scenes/gameplay/camera.gd" id="5_x402s"]
 [ext_resource type="Texture2D" uid="uid://bveq7w6bpd8l6" path="res://assets/square.svg" id="6_bxmfm"]
-[ext_resource type="Texture2D" uid="uid://4t2xpu4lowg7" path="res://assets/montana_copia.png" id="7_2h5xi"]
 [ext_resource type="PackedScene" uid="uid://dniap3b8cq0d1" path="res://scenes/level/square_wall.tscn" id="8_pi5gj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jgpq"]
 size = Vector2(64, 64)
+
+[sub_resource type="Resource" id="Resource_8h8ot"]
+metadata/__load_path__ = "res://assets/montana_copia.png"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bnr8y"]
 radius = 32.0
@@ -60,7 +62,7 @@ motion_scale = Vector2(0.165, 0.165)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.247059, 0.247059, 0.247059, 1)
 position = Vector2(-32, 215)
-texture = ExtResource("7_2h5xi")
+texture = SubResource("Resource_8h8ot")
 
 [node name="Walls" type="Sprite2D" parent="."]
 
