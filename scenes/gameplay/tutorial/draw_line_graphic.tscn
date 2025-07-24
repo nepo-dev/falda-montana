@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://spf8e1t04aev"]
 
-[ext_resource type="Script" uid="uid://v35xrmjsbnhn" path="res://scenes/tutorial/tutorial_draw_line_controller.gd" id="1_gma8m"]
+[ext_resource type="Script" uid="uid://v35xrmjsbnhn" path="res://scenes/gameplay/tutorial/tutorial_draw_line_controller.gd" id="1_gma8m"]
 [ext_resource type="Texture2D" uid="uid://dtt0hpq8wd37p" path="res://assets/cuerda/medio_cuerda.png" id="2_uybak"]
 [ext_resource type="Texture2D" uid="uid://bmsvsswibmidx" path="res://assets/raton_tutorial/raton_tutorial.png" id="2_xk3d0"]
 

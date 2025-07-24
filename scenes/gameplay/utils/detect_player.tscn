@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd2homxrf853x"]
 
-[ext_resource type="Script" uid="uid://sosdvrjmgswh" path="res://scenes/utils/signal_player_entered.gd" id="1_1wnt7"]
+[ext_resource type="Script" uid="uid://sosdvrjmgswh" path="res://scenes/gameplay/utils/detect_player.gd" id="1_1wnt7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ageqp"]
 size = Vector2(600, 300)
 
 [node name="DetectPlayer" type="Area2D"]
-position = Vector2(308, -728)
 script = ExtResource("1_1wnt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

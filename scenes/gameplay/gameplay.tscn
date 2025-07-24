@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://iaq32s2ve124"]
+[gd_scene load_steps=26 format=3 uid="uid://iaq32s2ve124"]
 
 [ext_resource type="Script" uid="uid://dbs4cjid3idlk" path="res://scenes/gameplay/rock/rock_manager.gd" id="1_023ww"]
 [ext_resource type="Script" uid="uid://cc3x37fyffm20" path="res://scenes/gameplay/bottom_floor.gd" id="1_id8xs"]
@@ -7,20 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://bakad7fcpo673" path="res://assets/zarigueya/main_salto.png" id="2_qlemm"]
 [ext_resource type="Script" uid="uid://bhgltbkbtenuj" path="res://scenes/gameplay/trampoline/trampoline-manager.gd" id="2_x7po0"]
 [ext_resource type="Script" uid="uid://df26nld7rvgwp" path="res://scenes/gameplay/player-character-sprite.gd" id="3_ljvf3"]
-[ext_resource type="Texture2D" uid="uid://bveq7w6bpd8l6" path="res://assets/square.svg" id="4_iy44v"]
 [ext_resource type="Script" uid="uid://blm6eqj5hg4h0" path="res://scenes/gameplay/camera.gd" id="5_h12vd"]
 [ext_resource type="Texture2D" uid="uid://dtt0hpq8wd37p" path="res://assets/cuerda/medio_cuerda.png" id="8_nf74t"]
 [ext_resource type="PackedScene" uid="uid://dcgm675xw4oul" path="res://scenes/gameplay/rock_spawner.tscn" id="8_w2p7d"]
 [ext_resource type="Texture2D" uid="uid://cym04to8josov" path="res://assets/fondo/fondo.png" id="9_kd73l"]
-[ext_resource type="PackedScene" uid="uid://cwvjgieuiww77" path="res://scenes/gameplay/trampoline/map.tscn" id="11_wuw5i"]
+[ext_resource type="PackedScene" uid="uid://cwvjgieuiww77" path="res://scenes/gameplay/map/map.tscn" id="11_wuw5i"]
 [ext_resource type="Script" uid="uid://djf76a1jhkd7k" path="res://scenes/gameplay/game_finish.gd" id="12_wvmty"]
 [ext_resource type="AudioStream" uid="uid://bpsmbf14mp08" path="res://assets/audio/win.ogg" id="13_dlsl4"]
-[ext_resource type="PackedScene" uid="uid://dd2homxrf853x" path="res://scenes/gameplay/detect_player.tscn" id="14_shnt8"]
-[ext_resource type="Script" uid="uid://de8xswf6jnyd7" path="res://scenes/tutorial/tutorial_movimiento.gd" id="18_bxi7s"]
+[ext_resource type="PackedScene" uid="uid://dd2homxrf853x" path="res://scenes/gameplay/utils/detect_player.tscn" id="14_shnt8"]
+[ext_resource type="Script" uid="uid://de8xswf6jnyd7" path="res://scenes/gameplay/tutorial/tutorial_movimiento.gd" id="18_bxi7s"]
 [ext_resource type="PackedScene" uid="uid://uijxw3520kld" path="res://scenes/gameplay/bushes/bush_manager.tscn" id="18_kakpp"]
-[ext_resource type="PackedScene" uid="uid://spf8e1t04aev" path="res://scenes/tutorial/draw_line_graphic.tscn" id="19_brn3d"]
+[ext_resource type="PackedScene" uid="uid://spf8e1t04aev" path="res://scenes/gameplay/tutorial/draw_line_graphic.tscn" id="19_brn3d"]
 [ext_resource type="PackedScene" uid="uid://dkng6ffmfdfvj" path="res://scenes/gameplay/bushes/bush.tscn" id="19_ownqs"]
-[ext_resource type="Script" uid="uid://jtv3t6k782u0" path="res://scenes/tutorial/tutorial_roca.gd" id="20_8urup"]
+[ext_resource type="Script" uid="uid://jtv3t6k782u0" path="res://scenes/gameplay/tutorial/tutorial_roca.gd" id="20_8urup"]
 [ext_resource type="AudioStream" uid="uid://cp8me3taxqmih" path="res://assets/audio/rocks.ogg" id="22_tn47s"]
 [ext_resource type="Script" uid="uid://c5na6dm2uqu2n" path="res://scenes/gameplay/rock_destroyed_sound.gd" id="23_bygat"]
 [ext_resource type="AudioStream" uid="uid://sm7j1y4u6xc4" path="res://assets/audio/music.ogg" id="24_knsvw"]
@@ -30,12 +29,6 @@ b = Vector2(600, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bnr8y"]
 radius = 32.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnds3"]
-size = Vector2(600, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jgpq"]
-size = Vector2(64, 64)
 
 [node name="Main" type="Node2D"]
 
@@ -91,23 +84,22 @@ script = ExtResource("3_ljvf3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerCharacter"]
 
 [node name="GameFinish" type="Node2D" parent="."]
-position = Vector2(-6, -5687)
+position = Vector2(0, -5662)
 script = ExtResource("12_wvmty")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="GameFinish" groups=["game_finish_floor"]]
-position = Vector2(-300, 50)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameFinish/StaticBody2D"]
-shape = SubResource("RectangleShape2D_fnds3")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
-
-[node name="Sprite2D" type="Sprite2D" parent="GameFinish"]
-modulate = Color(0, 0, 0, 0)
-scale = Vector2(50, 50)
-texture = ExtResource("4_iy44v")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GameFinish"]
 stream = ExtResource("13_dlsl4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameFinish"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameFinish/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="DetectPlayer" parent="." instance=ExtResource("14_shnt8")]
 position = Vector2(311, -705)
@@ -124,35 +116,6 @@ position = Vector2(270, -17)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(300, 400)
 script = ExtResource("5_h12vd")
-
-[node name="SideBorders" type="Node2D" parent="Camera2D"]
-position = Vector2(-300, -400)
-
-[node name="SideBorderLeft" type="StaticBody2D" parent="Camera2D/SideBorders" groups=["walls"]]
-visible = false
-position = Vector2(-32, 0)
-scale = Vector2(1, 50)
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/SideBorders/SideBorderLeft"]
-shape = SubResource("RectangleShape2D_8jgpq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/SideBorders/SideBorderLeft"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_iy44v")
-
-[node name="SideBorderRight" type="StaticBody2D" parent="Camera2D/SideBorders" groups=["walls"]]
-visible = false
-position = Vector2(632, 0)
-scale = Vector2(1, 50)
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/SideBorders/SideBorderRight"]
-shape = SubResource("RectangleShape2D_8jgpq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D/SideBorders/SideBorderRight"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_iy44v")
 
 [node name="RockSpawner" parent="Camera2D" instance=ExtResource("8_w2p7d")]
 position = Vector2(-8, -993)

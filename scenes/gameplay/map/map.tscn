@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://cwvjgieuiww77"]
 
-[ext_resource type="PackedScene" uid="uid://dniap3b8cq0d1" path="res://scenes/level/square_wall.tscn" id="1_uidw3"]
+[ext_resource type="PackedScene" uid="uid://dniap3b8cq0d1" path="res://scenes/gameplay/square_wall.tscn" id="1_uidw3"]
 [ext_resource type="Texture2D" uid="uid://dippkymngqml7" path="res://assets/tileset/tileset.png" id="2_7ehik"]
 [ext_resource type="PackedScene" uid="uid://uijxw3520kld" path="res://scenes/gameplay/bushes/bush_manager.tscn" id="4_31f6e"]
 [ext_resource type="PackedScene" uid="uid://dkng6ffmfdfvj" path="res://scenes/gameplay/bushes/bush.tscn" id="5_dkl73"]
-[ext_resource type="PackedScene" uid="uid://dpucibn4og47f" path="res://scenes/gameplay/trampoline/joke.tscn" id="6_l7kno"]
+[ext_resource type="PackedScene" uid="uid://dpucibn4og47f" path="res://scenes/gameplay/joke/joke.tscn" id="6_l7kno"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hpqmu"]
 friction = 0.0

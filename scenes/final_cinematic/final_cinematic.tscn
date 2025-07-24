@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://brnqolrps5hqs" path="res://assets/final_cinematic/montana_final.png" id="2_ixcqw"]
 [ext_resource type="Texture2D" uid="uid://ctlwiy2ggbun7" path="res://assets/final_cinematic/rata_final.png" id="3_ks4p6"]
 [ext_resource type="Texture2D" uid="uid://b8w61fd41sbfe" path="res://assets/final_cinematic/llorar_montana_final_1.png" id="3_ofjhy"]
-[ext_resource type="Script" uid="uid://cb5v8xc6dsoaf" path="res://scenes/finial_cinematic/final_cinematic.gd" id="4_hhglg"]
+[ext_resource type="Script" uid="uid://cb5v8xc6dsoaf" path="res://scenes/final_cinematic/final_cinematic.gd" id="4_hhglg"]
 [ext_resource type="Texture2D" uid="uid://d3wm2ydmoqkky" path="res://assets/final_cinematic/llorar_montana_final_2.png" id="4_sl3em"]
-[ext_resource type="Texture2D" uid="uid://bveq7w6bpd8l6" path="res://assets/square.svg" id="5_n8pgo"]
 [ext_resource type="Texture2D" uid="uid://eg7q4rshsjts" path="res://assets/final_cinematic/risa_montana_final_1.png" id="5_na281"]
 [ext_resource type="Texture2D" uid="uid://bd4afi7u3cevr" path="res://assets/final_cinematic/risa_montana_final_2.png" id="6_aiw3e"]
 [ext_resource type="Texture2D" uid="uid://bsa32mec5tk5b" path="res://assets/bocadillo_final.png" id="6_m4y2h"]
@@ -182,13 +181,64 @@ _data = {
 &"new_animation": SubResource("Animation_44s8t")
 }
 
-[sub_resource type="Animation" id="Animation_r4fka"]
-resource_name = "transition"
-length = 0.5
+[sub_resource type="Animation" id="Animation_nkb2w"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_r1id2"]
+[sub_resource type="Animation" id="Animation_ughfj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ughfj"]
 _data = {
-&"transition": SubResource("Animation_r4fka")
+&"RESET": SubResource("Animation_ughfj"),
+&"start": SubResource("Animation_nkb2w")
 }
 
 [node name="FinalCinematic" type="Node2D"]
@@ -262,17 +312,22 @@ theme_override_font_sizes/bold_font_size = 26
 bbcode_enabled = true
 text = "Hola k tal bbsita?"
 
-[node name="Transition" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
-position = Vector2(300, 400)
-scale = Vector2(7, 7)
-texture = ExtResource("5_n8pgo")
+[node name="Transition" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
 libraries = {
-&"": SubResource("AnimationLibrary_r1id2")
+&"": SubResource("AnimationLibrary_ughfj")
 }
-autoplay = "transition"
+autoplay = "start"
 
 [node name="MountainStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_pf534")
